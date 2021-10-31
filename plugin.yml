@@ -1,0 +1,16 @@
+name: ExperienceVanish
+version: 1.0
+main: it.minecraftexperience.vanish
+api-version: 1.13
+author: GaetanoXD
+description: Plugin Vanish per Minecraft Experience
+commands:
+  vanish:
+    descripion: Attiva / Disattiva Vanish
+    permission: exp.vanish
+    permission-message: Non hai il permesso!
+permissions:
+  exp.vanish:
+    description: Attiva / Disattiva Vanish
+    
+    
