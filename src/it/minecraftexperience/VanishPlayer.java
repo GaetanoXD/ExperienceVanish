@@ -6,6 +6,8 @@ import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 public class VanishPlayer {
     vanish vanish;
@@ -16,12 +18,12 @@ public class VanishPlayer {
 // Sistema Vanish
     public void vanishPlayer(Player vanishplayer) {
         vanish.gamemodelist.put(vanishplayer, vanishplayer.getGameMode());
-        vanishplayer.setGameMode(GameMode.CREATIVE);
+        vanishplayer.setGameMode(GameMode.SURVIVAL);
 // Deprecato, non utilzzato.
         Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', vanish.getConfig().getString("quitmessage").replaceAll("%playername%", vanishplayer.getDisplayName())));
 
         vanish.taskidlist.put(vanishplayer, Bukkit.getScheduler().scheduleSyncRepeatingTask(vanish, () -> {
-            TextComponent actionbar = new TextComponent("You are vanished at the moment!");
+            TextComponent actionbar = new TextComponent("Sei nascosto ad altri giocatori!");
             actionbar.setColor(ChatColor.GOLD);
 
             vanishplayer.spigot().sendMessage(ChatMessageType.ACTION_BAR, actionbar);
