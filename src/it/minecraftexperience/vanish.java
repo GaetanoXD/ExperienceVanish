@@ -26,14 +26,8 @@ public class vanish extends JavaPlugin {
     public void onEnable() {
         console = getLogger();
         vanishPlayer = new VanishPlayer(this);
-// Debug
-        console.info("");
-        saveDefaultConfig();
+// Comando Vanish
 
-        console.info("");
-        getServer().getPluginManager().registerEvents(new PlayerEvents(this),this);
-
-        console.info("");
         PluginCommand vanish = getServer().getPluginCommand("vanish");
 
         if (vanish != null) {
