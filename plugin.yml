@@ -14,4 +14,9 @@ permissions:
   exp.vanish:
     description: Attiva / Disattiva Vanish
     
+  sv:
+    descripion: Silent Vanish
+  
+    
+    
     

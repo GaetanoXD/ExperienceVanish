@@ -43,4 +43,3 @@ public class vanish extends JavaPlugin {
 
 
 	}
-
