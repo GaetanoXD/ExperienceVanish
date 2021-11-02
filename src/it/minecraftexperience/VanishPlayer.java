@@ -18,9 +18,8 @@ public class VanishPlayer {
 // Sistema Vanish
     public void vanishPlayer(Player vanishplayer) {
         vanish.gamemodelist.put(vanishplayer, vanishplayer.getGameMode());
-        vanishplayer.setGameMode(GameMode.SURVIVAL);
-// Deprecato, non utilzzato.
-        Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', vanish.getConfig().getString("quitmessage").replaceAll("%playername%", vanishplayer.getDisplayName())));
+        vanishplayer.setGameMode(GameMode.SPECTATOR);
+
 
         vanish.taskidlist.put(vanishplayer, Bukkit.getScheduler().scheduleSyncRepeatingTask(vanish, () -> {
             TextComponent actionbar = new TextComponent("Sei nascosto ad altri giocatori!");
@@ -39,8 +38,7 @@ public class VanishPlayer {
     public void unvanishPlayer(Player unvanishplayer) {
         unvanishplayer.setGameMode(vanish.gamemodelist.get(unvanishplayer));
         vanish.gamemodelist.remove(unvanishplayer);
-// Deprecato.
-        Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', vanish.getConfig().getString("joinmessage").replaceAll("%playername%", unvanishplayer.getDisplayName())));
+
 
         Bukkit.getScheduler().cancelTask(vanish.taskidlist.get(unvanishplayer));
         vanish.taskidlist.remove(unvanishplayer);

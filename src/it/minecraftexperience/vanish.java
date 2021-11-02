@@ -40,4 +40,7 @@ public class vanish extends JavaPlugin {
         return gamemodelist.containsKey(player) && taskidlist.containsKey(player);
     }
 
-}
+
+
+	}
+

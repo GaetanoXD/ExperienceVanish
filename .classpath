@@ -7,5 +7,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/Users/Gaetano/Desktop/Sviluppi/cache/patched_1.17.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Gaetano/Downloads/ProtocolLib.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
