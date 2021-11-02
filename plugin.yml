@@ -9,6 +9,7 @@ commands:
     descripion: Attiva / Disattiva Vanish
     permission: exp.vanish
     permission-message: Non hai il permesso!
+    aliases: [v]
 permissions:
   exp.vanish:
     description: Attiva / Disattiva Vanish
